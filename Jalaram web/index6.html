@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jalaram Industrial Supplies Ltd - Quality Hardware Products</title>
+  <meta name="description" content="Jalaram Industrial Supplies Ltd offers top-quality hardware products across nine categories. Explore our range and contact us today!">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Custom CSS for scroll-to-top button */
+    #scrollToTop {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+    }
+    /* Custom CSS for category cards */
+    .category-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    /* Custom CSS for mobile menu */
+    #mobileMenu {
+      display: none;
+    }
+    #mobileMenu.active {
+      display: block;
+    }
+    /* Custom Font */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Tagline Section Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .tagline-section {
+      animation: fadeIn 1s ease-out;
+    }
+    /* Mobile Menu Link Styling */
+    #mobileMenu a {
+      transition: color 0.3s ease;
+    }
+    #mobileMenu a:hover, #mobileMenu a:active {
+      color: #3b82f6; /* Blue color */
+    }
+    /* Menu Icon Styling */
+    #menuToggle {
+      transition: color 0.3s ease;
+    }
+    #menuToggle:hover, #menuToggle.active {
+      color: #3b82f6; /* Blue color */
+    }
+    /* Mobile Menu Layout Styling */
+    #mobileMenu {
+      background-color: #ffffff; /* White background */
+      border-top: 2px solid #3b82f6; /* Bold blue border */
+    }
+    /* Image Container Styling */
+    
+    .image-container {
+      height: 200px; /* Fixed height for images */
+      overflow: hidden; /* Ensure images don't overflow */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* Ensure the entire image is visible */   
+   }
+   /* Ensure emails wrap properly on small screens */
+a[href^="mailto:"] {
+  word-break: break-all;
+}
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold text-gray-800">
+        <img src="images/WhatsApp Image 2025-02-05 at 12.10.36 (1).jpeg" alt="Jalaram Industrial Supplies Logo" class="h-12 md:h-16">
+      </a>
+      <!-- Nav Links (Desktop) -->
+      <div class="hidden md:flex space-x-6 items-center">
+        <a href="#categories" class="text-gray-700 hover:text-blue-600">Categories</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600">About Us</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </div>
+      <!-- Mobile Menu Icon -->
+      <button id="menuToggle" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobileMenu" class="md:hidden bg-white px-6 py-4 border-t-2 border-blue-600">
+      <a href="#about" class="block text-gray-700 hover:text-blue-600 mb-2 px-4 py-2 rounded">About Us</a>
+      <a href="#categories" class="block text-gray-700 hover:text-blue-600 mb-2 px-4 py-2 rounded">Categories</a>
+     
+      <a href="#contact" class="block text-gray-700 hover:text-blue-600 px-4 py-2 rounded">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Tagline Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 tagline-section">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4">JALARAM INDUSTRIAL SUPPLIERS LTD</h1>
+      <p class="text-xl md:text-2xl">Dealers in Hardware, Industrial Spares, Engineering Tools & Welding Products</p>
+    </div>
+  </section>
+<!-- About Us Section -->
+<section
+  id="about"
+  class="py-16 bg-gradient-to-r from-blue-50 to-blue-100 relative sm:bg-cover sm:bg-center"
+  style="background-image: url('images/about us2.avif');"
+>
+  <!-- Content Container -->
+  <div class="container mx-auto px-6">
+    <!-- Small Screens Layout: Circular Image -->
+    <div class="sm:hidden flex justify-center mb-6">
+      <img
+        src="images/about 4.jpg"
+        alt="About Us"
+        class="w-40 h-40 rounded-full border-4 border-white shadow-lg"
+      />
+    </div>
+
+    <!-- Large Screens Layout: Circular Image -->
+    <div class="hidden sm:flex justify-center mb-6">
+      <img
+        src="images/about 4.jpg" 
+        alt="About Us"
+        class="w-56 h-56 lg:w-64 lg:h-64 rounded-full border-4 border-white shadow-lg"
+      />
+    </div>
+
+    <!-- About Us Text -->
+    <div class="max-w-2xl mx-auto text-white space-y-6 text-lg bg-black bg-opacity-50 p-6 rounded-lg shadow-md">
+      <p>
+        Jalaram Industrial Suppliers Ltd deals in the supply of a variety of products. We pride ourselves on the versatility of choice, price, and deliverability of our services.
+      </p>
+      <p>
+        With a vision to become one of the leading supplies companies in the region, both the management and the staff believe in honesty and integrity as we serve our customers. We believe in doing business in a fair and ethical manner, governed by years of experience in the industry.
+      </p>
+      <p>
+        Our main goal is to ensure that our clients remain the focus and center of our activities as we strive to meet the needs of the industry.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Categories Section -->
+<section id="categories" class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Products</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Category 1 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/media_565e8104-7e04-402b-a631-39fa499b241a.jpg" alt="Pulley & Lifting" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Pulley & Lifting</h3>
+          <p class="text-gray-600">Chains, Wire ropes & fittings, Hooks, Eye Bolts, Trolleys, Jacks, Pulleys, Slings, Lifting Belts, Chain Blocks</p>
+        </div>
+        
+      
+        <!-- Category 2 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/plumbing.webp" alt="Plumbing" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Plumbing</h3>
+          <p class="text-gray-600">Toilets, Urinals, Cisterns, Pumps, Plugs & Fittings. Mops, Brooms, Steam Traps, Waste Pipes & Fittings</p>
+        </div>
+        <!-- Category 3 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/91-919926_respirator-png-download-dust-mask-transparent-png-png.png" alt="Safety Equipment" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Safety Equipment</h3>
+          <p class="text-gray-600">Safety glasses, spectacles, Face Shields, Ear Plugs, Ear Muffs, Helmets, Welding Helmets, Respirators, Harnesses, Safety Shoes, Gloves, Aprons, Anklets, etc.</p>
+        </div>
+        <!-- Category 4 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/LOCKNUTS.jpg" alt="Fasteners" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Fasteners</h3>
+          <p class="text-gray-600">Bolts, Nuts, Locknuts, Washers, in High Tensile (8.8 Grade, 10.9 Grade), Stainless Steel, Brass, etc. Threaded rods, Eye Bolts, U-Bolts, Anchor & Rawl Bolts, Rivets, Key Stock, Cable Ties.</p>
+        </div>
+        <!-- Category 5 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/714dMI+501L.jpg" alt="Hoses, Tubing, Pipes & Fittings" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Hoses, Tubing, Pipes & Fittings</h3>
+          <p class="text-gray-600">PU Pipes, PU Connectors, Weldon Fittings, Air Filter Regulators (FRLs), Pressure Gauges.</p>
+        </div>
+        <!-- Category 6 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/Weldarc.jpg" alt="Welding Products" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Welding Products</h3>
+          <p class="text-gray-600">Welding Consumables (Mild Steel, Low Hydrogen, Stainless Steel, Cast Iron, Silver Aluminum, Nickel Electrodes, Soft Solders, Hard Facing, Gauge & Cutting, Fluxes & Chemicals), Gas Regulators.</p>
+        </div>
+        <!-- Category 7 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/power-transmission-components.webp" alt="Power Transmission" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Power Transmission</h3>
+          <p class="text-gray-600">Bearings, Bushes, Sprockets, Belts, Springs.</p>
+        </div>
+        <!-- Category 8 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/305-3057826_borum-vice-bench-type-range-choice-of-100mm.png" alt="Hand Tools" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Hand Tools</h3>
+          <p class="text-gray-600">Wrenches, Plain Sockets, Hex Key & Drivers, Measuring Tapes, Screw Drivers, Screw Extractors, Blade Files, Step Drills, Tool Sets, Hammers, Pliers.</p>
+        </div>
+        <!-- Category 9 -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg text-center">
+          <div class="image-container">
+            <img src="images/63014103.avif" alt="Lubricating" class="w-full h-48 object-cover mb-4 rounded">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Lubricating</h3>
+          <p class="text-gray-600">Grease Guns, Grease Fittings, Oil Can, Oil Buckets, Grease Buckets (Manual, Foot Operated, or Pneumatic).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+<section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <!-- Location -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <i class="fas fa-map-marker-alt text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Location</h3>
+          <p class="text-gray-700">AGA KHAN ROAD, NEAR BLOOD CENTRE P.O.BOX 97044-80112, MOMBASA</p>
+        </div>
+        <!-- Email -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <i class="fas fa-envelope text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Email</h3>
+          <p class="text-gray-700">info@jalaramkenya.com</p>
+          <p class="text-gray-700">jalarammsa@gmail.com</p>
+        </div>
+        <!-- Call -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <i class="fas fa-phone text-blue-600 text-4xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Call Us</h3>
+          <a href="tel:+254723338478" class="text-blue-600 hover:text-blue-800">+254 723 338 478</a>
+          <p><a href="tel:+254735338478" class="text-blue-600 hover:text-blue-800">+254 735 338 478</a></p>
+          <p><a href="tel:+254731768851" class="text-blue-600 hover:text-blue-800">+254 731 768 851</a></p>
+        </div>
+      </div>
+      <!-- Social Icons -->
+      <div class="flex justify-center space-x-6 mt-12">
+        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#" class="text-pink-600 hover:text-pink-800"><i class="fab fa-instagram fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+  
+  
+     
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollToTop" class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2023 Jalaram Industrial Supplies Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Scroll-to-Top Button and Mobile Menu -->
+  <script>
+    // Scroll-to-Top Button
+    const scrollToTopButton = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollToTopButton.style.display = 'block';
+      } else {
+        scrollToTopButton.style.display = 'none';
+      }
+    });
+    scrollToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
